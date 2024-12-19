@@ -1,0 +1,136 @@
+{% extends './base.html' %}
+
+{% block title %}Главная страница{% endblock %}
+
+{% block content %}
+
+<section id="phones-and-gadgets" class="carousel-container">
+    <div class="container">
+        <h2 class="section-title">Все товары</h2>
+        <div class="product-carousel">
+            {% for product in phones_and_gadgets %}
+            <div class="product-item">
+                <img src="{{ product.image.url }}" alt="{{ product.name }}">
+                <h5>{{ product.name }}</h5>
+                <p>{{ product.description }}</p>
+                <div class="price">{{ product.price }} &#8376;</div>
+                <a href="{% url 'product_detail' product_id=product.pk product_slug=product.slug %}" class="btn btn-dark">Обзор</a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<section id="clothes-and-shoes" class="carousel-container">
+    <div class="container">
+        <div class="product-carousel">
+            {% for product in clothes_and_shoes %}
+            <div class="product-item">
+                <img src="{{ product.image.url }}" alt="{{ product.name }}">
+                <h5>{{ product.name }}</h5>
+                <p>{{ product.description }}</p>
+                <div class="price">{{ product.price }} &#8376;</div>
+                <a href="{% url 'product_detail' product_id=product.pk product_slug=product.slug %}" class="btn btn-dark">Обзор</a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<section id="computers-and-peripherals" class="carousel-container">
+    <div class="container">
+        <div class="product-carousel">
+            {% for product in computers_and_peripherals %}
+            <div class="product-item">
+                <img src="{{ product.image.url }}" alt="{{ product.name }}">
+                <h5>{{ product.name }}</h5>
+                <p>{{ product.description }}</p>
+                <div class="price">{{ product.price }} &#8376;</div>
+                <a href="{% url 'product_detail' product_id=product.pk product_slug=product.slug %}" class="btn btn-dark">Обзор</a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<section id="home-appliances" class="carousel-container">
+    <div class="container">
+        <div class="product-carousel">
+            {% for product in home_appliances %}
+            <div class="product-item">
+                <img src="{{ product.image.url }}" alt="{{ product.name }}">
+                <h5>{{ product.name }}</h5>
+                <p>{{ product.description }}</p>
+                <div class="price">{{ product.price }} &#8376;</div>
+                <a href="{% url 'product_detail' product_id=product.pk product_slug=product.slug %}" class="btn btn-dark">Обзор</a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<section id="beauty-and-health" class="carousel-container">
+    <div class="container">
+        <div class="product-carousel">
+            {% for product in beauty_and_health %}
+            <div class="product-item">
+                <img src="{{ product.image.url }}" alt="{{ product.name }}">
+                <h5>{{ product.name }}</h5>
+                <p>{{ product.description }}</p>
+                <div class="price">{{ product.price }} &#8376;</div>
+                <a href="{% url 'product_detail' product_id=product.pk product_slug=product.slug %}" class="btn btn-dark">Обзор</a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<section id="jewelry" class="carousel-container">
+    <div class="container">
+        <div class="product-carousel">
+            {% for product in jewelry %}
+            <div class="product-item">
+                <img src="{{ product.image.url }}" alt="{{ product.name }}">
+                <h5>{{ product.name }}</h5>
+                <p>{{ product.description }}</p>
+                <div class="price">{{ product.price }} &#8376;</div>
+                <a href="{% url 'product_detail' product_id=product.pk product_slug=product.slug %}" class="btn btn-dark">Обзор</a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<section id="tv-audio-video" class="carousel-container">
+    <div class="container">
+        <div class="product-carousel">
+            {% for product in tv_audio_video %}
+            <div class="product-item">
+                <img src="{{ product.image.url }}" alt="{{ product.name }}">
+                <h5>{{ product.name }}</h5>
+                <p>{{ product.description }}</p>
+                <div class="price">{{ product.price }} &#8376;</div>
+                <a href="{% url 'product_detail' product_id=product.pk product_slug=product.slug %}" class="btn btn-dark">Обзор</a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<section id="pets-products" class="carousel-container">
+    <div class="container">
+        <div class="product-carousel">
+            {% for product in pets_products %}
+            <div class="product-item">
+                <img src="{{ product.image.url }}" alt="{{ product.name }}">
+                <h5>{{ product.name }}</h5>
+                <p>{{ product.description }}</p>
+                <div class="price">{{ product.price }} &#8376;</div>
+                <a href="{% url 'product_detail' product_id=product.pk product_slug=product.slug %}" class="btn btn-dark">Обзор</a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+{% endblock %}
